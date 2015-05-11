@@ -1,0 +1,29 @@
+inherit kf5
+
+NAME="kf5-kglobalaccel"
+VERSION=5.9.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 keyboard accelerator library"
+DESCRIPTION="KGlobalAccel allows you to have global accelerators that are
+independent of the focused window.  Unlike regular shortcuts, the application's
+window does not need focus for them to be activated."
+
+PKG_NAMES="libKF5GlobalAccel5 libKF5GlobalAccel-devel"
+libKF5GlobalAccel5_CONTENTS="
+	usr/bin/cygKF5GlobalAccel-5.dll
+	usr/bin/kglobalaccel5.exe
+	usr/share/doc/
+	usr/share/dbus-1/services/
+	usr/share/kservices5/
+	usr/share/locale/
+"
+libKF5GlobalAccel_devel_REQUIRES="libQt5Core-devel libQt5Gui-devel libQt5X11Extras-devel"
+libKF5GlobalAccel_devel_CONTENTS="
+	usr/include/KF5/KGlobalAccel/
+	usr/include/KF5/kglobalaccel_version.h
+	usr/lib/cmake/KF5GlobalAccel/
+	${QT5_MKSPECSDIR#/}/modules/qt_KGlobalAccel.pri
+	usr/lib/libKF5GlobalAccel.dll.a
+	usr/share/dbus-1/interfaces/
+"
