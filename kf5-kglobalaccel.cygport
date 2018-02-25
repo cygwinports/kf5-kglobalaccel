@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-kglobalaccel"
-VERSION=5.39.0
+VERSION=5.43.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 keyboard accelerator library"
@@ -11,6 +11,7 @@ window does not need focus for them to be activated."
 
 PKG_NAMES="libKF5GlobalAccel5 libKF5GlobalAccel-devel"
 libKF5GlobalAccel5_CONTENTS="
+	etc/xdg/kglobalaccel.categories
 	usr/bin/cygKF5GlobalAccel-5.dll
 	usr/bin/cygKF5GlobalAccelPrivate-5.dll
 	usr/bin/kglobalaccel5.exe
